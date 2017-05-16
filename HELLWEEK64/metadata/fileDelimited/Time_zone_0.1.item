@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_5OiecGgcEeONMtYsYm-UXw" name="Time_zone" dataPackage="_5OiecWgcEeONMtYsYm-UXw" Server="Localhost 127.0.0.1" FilePath="C:/To_Install/SentimentFiles/SentimentFiles/upload/data/time_zone_map/time_zone_map.tsv" Encoding="US-ASCII" FieldSeparatorValue="&quot;\t&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true" FieldSeparatorType="Tabulation"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_5OiecWgcEeONMtYsYm-UXw" name="default" dataManager="_5OiecGgcEeONMtYsYm-UXw">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_5OiecmgcEeONMtYsYm-UXw" id="_1j5YsGgcEeONMtYsYm-UXw" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_5Oiec2gcEeONMtYsYm-UXw" label="time_zone" length="26" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_5OiedGgcEeONMtYsYm-UXw" label="country" length="20" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

@@ -1,0 +1,930 @@
+// template routine Java
+package routines;
+
+import java.math.BigDecimal;
+import java.text.NumberFormat;
+import java.text.DecimalFormat;
+import java.lang.NumberFormatException;
+import java.util.Calendar;
+import java.util.Date;
+import java.lang.RuntimeException;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class Convert {
+
+	
+    /**
+     * getZeroShort( ) returns a Short initialized to zero.
+     * 
+     * {talendTypes} short | Short
+     * 
+     * {Category} Convert
+     * 
+     * {param} none
+     * 
+     * {example} getZeroShort()
+     * 
+     * 
+     */
+    public static Short getZeroShort() {
+        
+    	return new Short("0");
+  	
+    }
+    
+    /**
+     * IsPositiveInteger( ) Indicates when a variable is a positive integer value (i >= 0).
+     * 
+     * {talendTypes} boolean | Boolean
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object(null)
+     * 
+     * {example} IsPositiveNumeric(row1.MY_VAR)
+     * 
+     * 
+     */
+    public static boolean IsPositiveInteger(Object variable) {
+        
+    	if (variable instanceof Integer) {
+    		int i = ((Integer)variable).intValue();
+    		
+    		if (i >= 0) {
+    			return true;
+    		}
+    	}
+    	
+    	return false;
+    }
+
+    /**
+     * StringToDate() Translates a String object to a Date.  Returns current date if null or not a date in yyyy-M-dd.
+     * 
+     * {talendTypes} Date
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object(null)
+     * 
+     * {example} StringToDate(row1.MY_VAR)
+     * 
+     * 
+     */
+    public static Date StringToDate(Object pattern, Object date) {
+
+    	if ((pattern instanceof String) && (date instanceof String)) {
+
+            try {
+               	return TalendDate.parseDate(pattern.toString(), date.toString());
+           	}
+       		catch(RuntimeException rte) {
+       			// Do nothing.  Just fall through.
+           	}
+    	}
+    	return TalendDate.getCurrentDate();
+    }
+    
+    /**
+     * StringToDouble() Translates a Sting object to a Double.
+     * 
+     * {talendTypes} double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object(null)
+     * 
+     * {example} StringToDouble(row1.MY_VAR)
+     * 
+     * 
+     */
+    public static Double StringToDouble(Object variable) {
+
+    	if ((variable != null) && (variable instanceof String)) {
+            String regex = "[$,\"]";
+            String input = variable.toString();
+            String s = input.replaceAll(regex, "");
+            
+        	if (!"".equals(s)) {
+        		try {
+            		return new Double(s);
+            	}
+        		catch(NumberFormatException nfe) {
+        			// Do nothing.  Just fall through.
+            	}
+            }
+    	}
+    		
+    	return new Double(0.00);
+    }
+
+    
+    /**
+     * StringToBigDecimal() Translates a Sting object to a Big Decimal.
+     * 
+     * {talendTypes} Big Decimal
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object(null)
+     * 
+     * {example} StringToBigDecimal(row1.MY_VAR)
+     */
+    public static BigDecimal StringToBigDecimal(Object variable) {
+
+    	if ((variable != null) && (variable instanceof String)) {
+            String regex = "[$,;`'/&%*#@?!()]";
+            String input = variable.toString();
+            String s = input.replaceAll(regex, "");
+       
+        	if (!"".equals(s)) {
+        		try {
+            		return new BigDecimal(s);
+            	}
+        		catch(NumberFormatException nfe) {
+        			// Do nothing.  Just fall through.
+            	}
+            }
+    	}
+    		
+    	return new BigDecimal(0.00);
+    }
+        
+    /**
+     * StringToInteger() Translates a Sting object to a Integer.  Returns 0 if null or not a number.
+     * 
+     * {talendTypes} int | Integer
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object(null)
+     * 
+     * {example} StringToInteger(row1.MY_VAR)
+     * 
+     * 
+     */
+    public static Integer StringToInteger(Object variable) {
+
+    	if (variable instanceof String) {
+            String regex = "[$,]";
+            String input = variable.toString();
+            String s = input.replaceAll(regex, "");
+            
+        	if (!"".equals(input)) {
+        		try {
+            		return new Integer(s);
+            	}
+        		catch(NumberFormatException nfe) {
+        			// Do nothing.  Just fall through.
+            	}
+            }
+    	}
+    		
+    	return new Integer(0);
+    }
+
+    /**
+     * StringToShort() Translates a Sting object to a Short.  Returns 0 if null or not a number.
+     * 
+     * {talendTypes} short | Short
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object(null)
+     * 
+     * {example} StringToShort(row1.MY_VAR)
+     * 
+     * 
+     */
+    public static Short StringToShort(Object variable) {
+
+    	if (variable instanceof String) {
+            String regex = "[$,]";
+            String input = variable.toString();
+            String s = input.replaceAll(regex, "");
+            
+        	if (!"".equals(input)) {
+        		try {
+            		return new Short(s);
+            	}
+        		catch(NumberFormatException nfe) {
+        			// Do nothing.  Just fall through.
+            	}
+            }
+    	}
+    		
+    	return new Short("0");
+    }
+
+    
+    
+    /**
+     * parseStringPosition( ) returns the param based on the number (0..n) from parsed string.
+     * 
+     * {talendTypes} string | String
+     * 
+     * {Category} Convert
+     * 
+     * {param} String, int
+     * 
+     * {example} parseStringPosition(row1.fullname, row2.fullname)
+     * 
+     * 
+     */
+    public static String parseStringPosition(String inputStr, int pos) {
+        
+    	if ((inputStr != null) && (inputStr instanceof String)) {
+    		
+    	    String patternStr = "(,|;)";
+    	    String[] fields = inputStr.split(patternStr);
+    	    
+    	    if (pos < fields.length) {
+    	    	return new String(fields[pos]);
+    	    }
+    	}
+    	
+    	return null;
+    	  	
+    }
+
+    
+    /**
+     * firstStringNotNull( ) returns the first param that is not null and is a String, else null.
+     * 
+     * {talendTypes} string | String
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object, Object
+     * 
+     * {example} firstStringNotNull(row1.fullname, row2.fullname)
+     * 
+     * 
+     */
+    public static String firstStringNotNull(Object obj1, Object obj2) {
+        
+    	if ((obj1 != null) && (obj1 instanceof String)) {
+    		return (String)obj1;
+    	} else if ((obj2 != null) && (obj2 instanceof String)) {
+    		return (String)obj2;
+    	} else {
+    		return null;
+    	}
+  	
+    }
+
+    /**
+     * firstDoubleNotNull( ) returns the first param that is not null and is a Double, else null.
+     * 
+     * {talendTypes} double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object, Object
+     * 
+     * {example} firstDoubleNotNull(row1.Price, row2.Price)
+     * 
+     * 
+     */
+    public static Double firstDoubleNotNull(Object obj1, Object obj2) {
+        
+    	if ((obj1 != null) && (obj1 instanceof Double)) {
+    		return (Double)obj1;
+    	} else if ((obj2 != null) && (obj2 instanceof Double)) {
+    		return (Double)obj2;
+    	} else {
+    		return null;
+    	}
+  	
+    }
+
+    /**
+     * firstBooleanNotNull( ) returns the first param that is not null and is a Boolean, else null.
+     * 
+     * {talendTypes} boolean | Boolean
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object, Object
+     * 
+     * {example} firstBooleanNotNull(row1.discontinued, row2.discontinued)
+     * 
+     * 
+     */
+    public static Boolean firstBooleanNotNull(Object obj1, Object obj2) {
+        
+    	if ((obj1 != null) && (obj1 instanceof Boolean)) {
+    		return (Boolean)obj1;
+    	} else if ((obj2 != null) && (obj2 instanceof Boolean)) {
+    		return (Boolean)obj2;
+    	} else {
+    		return null;
+    	}
+  	
+    }
+  
+    /**
+     * firstIntegerNotNull( ) returns the first param that is not null and is a Integer, else null.
+     * 
+     * {talendTypes} integer | Integer
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object, Object
+     * 
+     * {example} firstIntegerNotNull(row1.count, row2.count)
+     * 
+     * 
+     */
+    public static Integer firstIntegerNotNull(Object obj1, Object obj2) {
+        
+    	if ((obj1 != null) && (obj1 instanceof Integer)) {
+    		return (Integer)obj1;
+    	} else if ((obj2 != null) && (obj2 instanceof Integer)) {
+    		return (Integer)obj2;
+    	} else {
+    		return null;
+    	}
+  	
+    }
+    
+    /**
+     * firstShortNotNull( ) returns the first param that is not null and is a Short, else null.
+     * 
+     * {talendTypes} short | Short
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object, Object
+     * 
+     * {example} firstIntegerNotNull(row1.count, row2.count)
+     * 
+     * 
+     */
+    public static Short firstShortNotNull(Object obj1, Object obj2) {
+        
+    	if ((obj1 != null) && (obj1 instanceof Short)) {
+    		return (Short)obj1;
+    	} else if ((obj2 != null) && (obj2 instanceof Short)) {
+    		return (Short)obj2;
+    	} else {
+    		return 0;
+    	}
+  	
+    }
+
+    /**
+     * convertToStringCurrency( ) returns a String formatted as currency based on a Float input 
+     *  
+     * {talendTypes} float | Float | double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} convertToStringCurrency(row1.Price)
+     * 
+     * 
+     */
+    public static String convertToStringCurrency(Object obj1) {
+        
+    	if ((obj1 != null) && (obj1 instanceof Float)) {
+    		double total = ((Float)obj1).doubleValue();
+    	    NumberFormat nf = NumberFormat.getCurrencyInstance();
+    	    return new String(nf.format(total));
+    	} else if ((obj1 != null) && (obj1 instanceof Double)) {
+        	double total = ((Double)obj1).doubleValue();
+        	NumberFormat nf = NumberFormat.getCurrencyInstance();
+        	return new String(nf.format(total));
+    	} else {
+    		return new String("$0.00");
+    	}
+  	
+    }
+ 
+    /**
+     * convertPayPalStringToCurrency( ) returns a String formatted as currency based on a Float input 
+     *  
+     * {talendTypes} float | Float | double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} convertPayPalStringToCurrency(row1.Price)
+     * 
+     * 
+     */
+    public static String convertPayPalStringToCurrency(Object obj1) {
+        
+    	if ((obj1 != null) && (obj1 instanceof String)) {
+    		String ppAmount = (String)obj1;
+    		int len = ppAmount.length();
+
+    		if (len > 2)
+    			return new String( ppAmount.substring(0, len-2) + "." + ppAmount.substring(len-2));
+    	}
+
+		return new String("0.00");
+
+    }
+    
+    /**
+     * createOrClauseForTblMaster( ) returns a String formatted as "OR clause" for tblMaster.Manufacturer 
+     *  
+     * {talendTypes} string | String
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} createOrClauseForTblMaster(row1.mfg)
+     * 
+     * 
+     */
+    public static String createOrClauseForTblMaster(Object obj1) {
+        
+    	if ((obj1 != null) && (obj1 instanceof String)) {
+    		String clause = ((String)obj1).toString();
+    		StringBuffer outClause = new StringBuffer("(");
+    		
+    		String[] result = clause.split(",");
+    	    for (int x=0; x < result.length; x++) {
+    	    
+    	    	outClause.append("(tblMaster.Manufacturer)='");
+    	    	
+    	    	if (result[x] != null) {
+    	    		outClause.append(result[x].trim());
+    	    	}
+    	    	
+    	    	if (x >= result.length-1) {
+        	    	outClause.append("')");
+    	    	} else {
+        	    	outClause.append("' Or ");
+    	    	}
+    	    }
+    		return outClause.toString();
+    	} else {
+    		return new String("");
+    	}
+  	
+    }
+ 
+    /**
+     * formatDoubleDollarCents( ) returns a Double rounded to 2 decimal places
+     * 
+     * {talendTypes} double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} formatDoubleDollarCents(row1.Price)
+     * 
+     * 
+     */
+    public static Double formatDoubleDollarCents(Object obj1) {
+        
+    	if ((obj1 != null) && (obj1 instanceof Double)) {
+    		DecimalFormat df = new DecimalFormat("#.##");
+    		return( new Double(df.format(obj1)) );
+    	} else {
+    		return null;
+    	}
+  	
+    }
+   
+    /**
+     * validateTrackingCode( ) returns a valid TrackingCode.  Returns null if not valid.
+     * 
+     * {talendTypes} string | String
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} validateTrackingCode(row1.TrackingCode1)
+     */
+    public static String validateTrackingCode(Object obj1) {
+        
+    	if ((obj1 != null) && (obj1 instanceof String)) {
+    		String s = (String)obj1;
+    		if (!s.equalsIgnoreCase("NA") && !s.equalsIgnoreCase("00")) {
+    			return s.trim();
+    		}
+    	}
+    	
+    	return null;
+    	  	
+    }
+    
+    /**
+     * getSecondsByHour( ) returns the hours portion of the hh:mm:ss string in seconds.  Zero is an error.
+     * 
+     * {talendTypes} long | Long
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} getSecondsByHour(hh:mm:ss)
+
+     */
+    public static long getSecondsByHour(Object obj1)
+    {
+    	long retHoursSec = 0;
+    	
+    	if ((obj1 != null) && (obj1 instanceof String)) {
+    		String hhmmss = (String)obj1;
+    		
+    		try {
+    			retHoursSec = Long.parseLong(hhmmss.split(":")[0]);
+    			retHoursSec = 60 * 60 * retHoursSec;
+    		}
+    		catch(NumberFormatException nfe) {
+    			retHoursSec = 0;
+    		}
+    	}
+    	
+    	return retHoursSec;
+    }
+
+    /**
+     * getSecondsByMinutes( ) returns the minutes portion of the hh:mm:ss string in seconds.  Zero is an error.
+     * 
+     * {talendTypes} long | Long
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} getSecondsByMinutes(hh:mm:ss)
+
+     */
+    public static long getSecondsByMinutes(Object obj1)
+    {
+    	long retMinutesSec = 0;
+    	
+    	if ((obj1 != null) && (obj1 instanceof String)) {
+    		String hhmmss = (String)obj1;
+    		
+    		try {
+    			retMinutesSec = Long.parseLong(hhmmss.split(":")[1]);
+    			retMinutesSec = 60 * retMinutesSec;
+    		}
+    		catch(NumberFormatException nfe) {
+    			retMinutesSec = 0;
+    		}
+    	}
+    	
+    	return retMinutesSec;
+    }
+    /**
+     * getSecondsBySeconds( ) returns the seconds portion of the hh:mm:ss string in seconds.  Zero is an error.
+     * 
+     * {talendTypes} long | Long
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} getSecondsBySeconds(hh:mm:ss)
+
+     */
+    public static long getSecondsBySeconds(Object obj1)
+    {
+    	long retSedondsSec = 0;
+    	
+    	if ((obj1 != null) && (obj1 instanceof String)) {
+    		String hhmmss = (String)obj1;
+    		
+    		try {
+    			retSedondsSec = Long.parseLong(hhmmss.split(":")[2]);
+    		}
+    		catch(NumberFormatException nfe) {
+    			retSedondsSec = 0;
+    		}
+    	}
+    	
+    	return retSedondsSec;
+    }
+    
+    /**
+     * maxShort( ) returns MAX_SHORT if value passed in is greater than MAX.
+     * 
+     * {talendTypes} short | Short
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} maxShort(string)
+
+     */
+    public static short maxShort(Object obj1)
+    {
+    	short retVal = 0;
+    	
+    	if ((obj1 != null) && (obj1 instanceof String)) {
+    		
+    		String s = (String)obj1;
+    		
+    		try {
+    			Long myLong = new Long(s);
+    			
+    			if (myLong < Short.MAX_VALUE) {
+    				retVal = myLong.shortValue();
+    			} else {
+    				retVal = Short.MAX_VALUE;
+    			}
+    		}
+    		catch(NumberFormatException nfe) {
+    			// do nothing.  already set to max.
+    		}
+    	}
+    	
+    	return retVal;
+    }
+    
+    /**
+     * percentDiff( ) the difference between two doubles (now, then).
+     * 
+     * {talendTypes} double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Double, Double
+     * 
+     * {example} percentDiff(row1.now, row2.then)
+     * 
+     * 
+     */
+    public static Double percentDiff(Double obj1, Double obj2) {
+        
+    	Double now = new Double(0.0);
+    	Double then = new Double(0.0);
+    	
+    	if (obj1 != null) {
+    		now = obj1;
+    	}  
+    	
+    	if (obj2 != null) {
+    		then = obj2;
+    	} 
+    	
+    	if (then == 0.0) {
+    		return new Double(0.0);
+    	}
+    	
+    	return (((now / then) - 1));
+  	
+    }
+    
+    /**
+     * percentDiff( ) the difference between two integers (now, then).
+     * 
+     * {talendTypes} double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Integer, Integer
+     * 
+     * {example} percentDiff(row1.now, row2.then)
+     * 
+     * 
+     */
+    public static Double percentDiff(Integer obj1, Integer obj2) {
+    	
+    	Double now = new Double(0.0);
+    	Double then = new Double(0.0);
+    	
+    	if (obj1 != null) {
+    		now = new Double (obj1.toString());
+    	}  
+    	
+    	if (obj2 != null) {
+    		then = new Double (obj2.toString());
+    	} 
+    	
+      	return percentDiff(now, then);
+    }
+    
+    /**
+     * monthDigitToString( ) returns the prefix for the month based on the number passed in.
+     * 
+     * {talendTypes} string | String
+     * 
+     * {Category} Convert
+     * 
+     * {param} Integer
+     * 
+     * {example} percentDiff(row1.month)
+     * 
+     * 
+     */
+    public static String monthDigitToString(Integer month) {
+    	
+    	String retVal = "";
+    	int x = month != null ? month.intValue() : 0;
+    	
+    	switch (x) {
+    		case 1: retVal = "Jan"; break;
+    		case 2: retVal = "Feb"; break;
+    		case 3: retVal = "Mar"; break;
+    		case 4: retVal = "Apr"; break;
+    		case 5: retVal = "May"; break;
+    		case 6: retVal = "June"; break;
+    		case 7: retVal = "July"; break;
+    		case 8: retVal = "Aug"; break;
+    		case 9: retVal = "Sept"; break;
+    		case 10: retVal = "Oct"; break;
+    		case 11: retVal = "Nov"; break;
+    		case 12: retVal = "Dec"; break;
+    		default: retVal = ""; break;
+    	}
+    	
+    	return retVal;
+    }
+    
+    /**
+     * convertToAapexCurrency( ) returns a String formatted as currency based on a Float input 
+     *  
+     * {talendTypes} float | Float | double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} convertToAapexCurrency(row1.Price)
+     * 
+     */
+    public static String convertToAapexCurrency(Object obj1) {
+
+	    NumberFormat nf = NumberFormat.getCurrencyInstance();
+	    nf.setMaximumFractionDigits(0);
+
+    	if ((obj1 != null) && (obj1 instanceof Float)) {
+    		double total = ((Float)obj1).doubleValue();
+    	    return new String(nf.format(total));
+    	} else if ((obj1 != null) && (obj1 instanceof Double)) {
+        	double total = ((Double)obj1).doubleValue();
+        	return new String(nf.format(total));
+    	} else {
+    		return new String("$0");
+    	}
+  	
+    }
+    
+    /**
+     * convertToAapexPercentage( ) returns a String formatted as currency based on a Float input 
+     *  
+     * {talendTypes} float | Float | double | Double
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} convertToAapexPercentage(row1.Price)
+     * 
+     */
+    public static String convertToAapexPercentage(Object obj1) {
+
+	    NumberFormat nf = NumberFormat.getPercentInstance();
+	    nf.setMaximumFractionDigits(0);
+
+    	if ((obj1 != null) && (obj1 instanceof Float)) {
+    		double total = ((Float)obj1).doubleValue();
+    	    return new String(nf.format(total));
+    	} else if ((obj1 != null) && (obj1 instanceof Double)) {
+        	double total = ((Double)obj1).doubleValue();
+        	return new String(nf.format(total));
+    	} else {
+    		return new String("0%");
+    	}
+  	
+    }
+    
+    /**
+     * convertToAapexNumber( ) returns a String formatted as number
+     *  
+     * {talendTypes} float | Float | double | Double | Integer
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} convertToAapexNumber(row1.Price)
+     * 
+     * 
+     */
+    public static String convertToAapexNumber(Object obj1) {
+
+	    NumberFormat nf = NumberFormat.getNumberInstance();
+	    nf.setMaximumFractionDigits(0);
+
+    	if ((obj1 != null) && (obj1 instanceof Float)) {
+    		double total = ((Float)obj1).doubleValue();
+    	    return new String(nf.format(total));
+    	} else if ((obj1 != null) && (obj1 instanceof Double)) {
+        	double total = ((Double)obj1).doubleValue();
+        	return new String(nf.format(total));
+    	} else if ((obj1 != null) && (obj1 instanceof Integer)) {
+        	long total = ((Integer)obj1).longValue();
+        	return new String(nf.format(total));
+    	} else {
+    		return new String("0");
+    	}
+  	
+    }
+    
+    /**
+     * convertToPercent( ) returns a String formatted as number
+     *  
+     * {talendTypes} float | Float | double | Double | Integer
+     * 
+     * {Category} Convert
+     * 
+     * {param} Object
+     * 
+     * {example} convertToAapexNumber(row1.Price)
+     * 
+     * 
+     */
+    public static String convertToPercent(Object obj1) {
+
+	    NumberFormat nf = NumberFormat.getNumberInstance();
+	    nf.setMaximumFractionDigits(1);
+
+    	if ((obj1 != null) && (obj1 instanceof Float)) {
+    		double total = ((Float)obj1).doubleValue() * 100;
+    	    return new String(nf.format(total) + "%");
+    	} else if ((obj1 != null) && (obj1 instanceof Double)) {
+        	double total = ((Double)obj1).doubleValue() * 100;
+        	return new String(nf.format(total)+ "%");
+    	} else if ((obj1 != null) && (obj1 instanceof Integer)) {
+        	long total = ((Integer)obj1).longValue() * 100;
+        	return new String(nf.format(total)+ "%");
+    	} else {
+    		return new String("0.0%");
+    	}
+  	
+    }
+    
+    /**
+     * getQuarterFromDate( ) returns a String of the date YYYY-QQ
+     *  
+     * {talendTypes} date | Date
+     * 
+     * {Category} Convert
+     * 
+     * {param} Date
+     * 
+     * {example} getQuarter(row1.Date)
+     * 
+     * 
+     */
+    public static String getQuarter(Date date) 
+    {
+    	try
+    	{
+    		Calendar calendar = Calendar.getInstance();
+    		calendar.setTime(date);
+    
+    		int year = calendar.get(Calendar.YEAR);
+    		int month = calendar.get(Calendar.MONTH);  
+    	
+    		String qtr = "Q0";
+    	
+    		if (month >= Calendar.JANUARY && month <= Calendar.MARCH)
+    			qtr = "Q1";
+    		else if (month >= Calendar.APRIL && month <= Calendar.JUNE)
+    			qtr = "Q2";
+    		else if (month >= Calendar.JULY && month <= Calendar.SEPTEMBER)
+    			qtr = "Q3";
+    		else
+    			qtr = "Q4";
+    	
+    		return year + "-" + qtr;
+    	} catch (Exception ex) {
+    		return "2111-Q1";
+    	}
+    }
+
+}

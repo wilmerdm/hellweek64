@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_UzKsQDoaEee1kq_8gS7ABQ" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_UzKsQToaEee1kq_8gS7ABQ" comment="" name="Product_FileMask" prompt="Product_FileMask?" promptNeeded="false" type="id_String" value="&quot;Product_Monthly*&quot;"/>
+  <contextParameter xmi:id="_UzKsQjoaEee1kq_8gS7ABQ" comment="" name="ThresholdFlag" prompt="ThresholdFlag?" promptNeeded="false" type="id_Integer" value="50"/>
+  <contextParameter xmi:id="_UzKsQzoaEee1kq_8gS7ABQ" comment="" name="CompareFile1" prompt="CompareFile1?" promptNeeded="false" type="id_String" value="&quot;Previous_Month_Report.gz&quot;"/>
+  <contextParameter xmi:id="_UzKsRDoaEee1kq_8gS7ABQ" comment="" name="CompareFile2" prompt="CompareFile2?" promptNeeded="false" type="id_String" value="&quot;Current_Month_Report.txt&quot;"/>
+  <contextParameter xmi:id="_UzKsRToaEee1kq_8gS7ABQ" comment="" name="LocalFile_Dir" prompt="LocalFile_Dir?" promptNeeded="false" type="id_String" value="&quot;/home/talend/Documents&quot;"/>
+  <contextParameter xmi:id="_UzKsRjoaEee1kq_8gS7ABQ" comment="" name="HDFSFile_Dir" prompt="HDFSFile_Dir?" promptNeeded="false" type="id_String" value="&quot;/user/talend/Product_demo&quot;"/>
+  <contextParameter xmi:id="_UzKsRzoaEee1kq_8gS7ABQ" comment="" name="WebFile_Dir" prompt="WebFile_Dir?" promptNeeded="false" type="id_String" value="&quot;/var/www/html/Product&quot;"/>
+</talendfile:ContextType>

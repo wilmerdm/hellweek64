@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_nqlsANAHEeWHf7f2Jv_kKA" name="MySQL" id="_fyl1ANAHEeWHf7f2Jv_kKA" label="MySQL" dataPackage="_vXOUkPqyEeaG86AyHqLWrA" DatabaseType="MySQL" DriverClass="org.gjt.mm.mysql.Driver" URL="jdbc:mysql://mysql.weave.local:3306/sandbox?noDatetimeStringSync=true" dbVersionString="MYSQL_5" Port="3306" Username="sandbox" Password="Iq+QL+rTuQw=" ServerName="mysql.weave.local" DatasourceName="" FileFieldName="" SID="sandbox" SqlSynthax="SQL Syntax" DbmsId="mysql_id" ProductId="MYSQL" AdditionalParams="noDatetimeStringSync=true" StandardSQL="true" SQLMode="false" UiSchema="">
+    <taggedValue xmi:id="_nqlsAdAHEeWHf7f2Jv_kKA" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_nru7gNAHEeWHf7f2Jv_kKA" tag="package filter" value=""/>
+    <taggedValue xmi:id="_nru7gdAHEeWHf7f2Jv_kKA" tag="Status" value=""/>
+    <taggedValue xmi:id="_nru7gtAHEeWHf7f2Jv_kKA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_nru7g9AHEeWHf7f2Jv_kKA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_nru7hNAHEeWHf7f2Jv_kKA" tag="Description" value=""/>
+    <taggedValue xmi:id="_nru7hdAHEeWHf7f2Jv_kKA" tag="Author" value=""/>
+    <taggedValue xmi:id="_nru7htAHEeWHf7f2Jv_kKA" tag="otherParameter"/>
+    <taggedValue xmi:id="_nr1CINAHEeWHf7f2Jv_kKA" tag="DB ProductName" value="MySQL"/>
+    <taggedValue xmi:id="_nr1CIdAHEeWHf7f2Jv_kKA" tag="DB ProductVersion" value="5.7.17"/>
+    <taggedValue xmi:id="_nr1CItAHEeWHf7f2Jv_kKA" tag="DB IdentifierQuoteString" value="`"/>
+    <parameters xmi:id="_nqlsAtAHEeWHf7f2Jv_kKA" key="CONN_PARA_KEY_USERNAME" value="sandbox"/>
+    <parameters xmi:id="_ucsmAPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Catalog xmi:id="_vXOUkPqyEeaG86AyHqLWrA" name="sandbox" dataManager="_nqlsANAHEeWHf7f2Jv_kKA"/>
+</xmi:XMI>

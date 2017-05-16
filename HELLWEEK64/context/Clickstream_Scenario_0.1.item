@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_UzBiUDoaEee1kq_8gS7ABQ" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_UzBiUToaEee1kq_8gS7ABQ" comment="" name="HTML_FileDir" prompt="HTML PRODUCED OUTPUT FILEPATH?" promptNeeded="false" type="id_String" value="&quot;/var/www/html/Clickstream&quot;"/>
+  <contextParameter xmi:id="_UzBiUjoaEee1kq_8gS7ABQ" comment="" name="HDFS_FileDir" prompt="HDFS_FileDir?" promptNeeded="false" type="id_String" value="&quot;/user/talend/clickstream_demo&quot;"/>
+  <contextParameter xmi:id="_UzBiUzoaEee1kq_8gS7ABQ" comment="" name="LOCAL_FileDir" prompt="LOCAL_FileDir?" promptNeeded="false" type="id_String" value="&quot;/home/talend/Documents/Clickstream&quot;"/>
+</talendfile:ContextType>

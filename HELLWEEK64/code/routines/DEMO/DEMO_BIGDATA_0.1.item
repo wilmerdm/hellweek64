@@ -1,0 +1,114 @@
+package routines;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+/*
+ * user specification: the function's comment should contain keys as follows: 1. write about the function's comment.but
+ * it must be before the "{talendTypes}" key.
+ * 
+ * 2. {talendTypes} 's value must be talend Type, it is required . its value should be one of: String, char | Character,
+ * long | Long, int | Integer, boolean | Boolean, byte | Byte, Date, double | Double, float | Float, Object, short |
+ * Short
+ * 
+ * 3. {Category} define a category for the Function. it is required. its value is user-defined .
+ * 
+ * 4. {param} 's format is: {param} <type>[(<default value or closed list values>)] <name>[ : <comment>]
+ * 
+ * <type> 's value should be one of: string, int, list, double, object, boolean, long, char, date. <name>'s value is the
+ * Function's parameter name. the {param} is optional. so if you the Function without the parameters. the {param} don't
+ * added. you can have many parameters for the Function.
+ * 
+ * 5. {example} gives a example for the Function. it is optional.
+ */
+public class DEMO_BIGDATA {
+
+    /**
+     * getHouseNumber: returns the house number from the address
+     * 
+     * 
+     * {talendTypes} String address
+     * 
+     * {Category} User Defined
+     * 
+     * {example} getHouseNumber("123 Main St.", "123") # Main St.
+     */
+    public static String getHouseNumber(String address) {
+        
+    	// Find the house number with a fraction
+        Pattern p = Pattern.compile("^(.*? \\d/\\d) (.*)");
+        Matcher m = p.matcher(address);
+
+        if (m.find()) {
+        	// Return the first () in the Pattern
+        	return m.group(1);
+        } else {
+
+        	// If no match, find the first alphanumeric word as the house number
+        	p = Pattern.compile("^(.*?) (.*)");
+            m = p.matcher(address);
+
+        	if (m.find()) {
+            	return m.group(1);
+        	}
+        }
+        
+        return "";
+    }
+	
+	
+    /**
+     * removeSubLocation: remove the subLocation from the address
+     * 
+     * 
+     * {talendTypes} String, String
+     * 
+     * {Category} User Defined
+     * 
+     * {example} removeSubLocation("123 Main St. APT 6A", "APT 6A") # 123 Main St.
+     */
+    public static String removeSubLocation(String address, String subLocation) {
+        if (address != null) {
+        	int subLocIndex = address.lastIndexOf(subLocation); 
+            
+        	if (subLocIndex >= 0) {
+        		return address.substring(0, subLocIndex).trim();
+        	} else {
+        		return address;
+        	}
+        	
+        } else {
+        	return "";
+        }
+    }
+    
+    /**
+     * removeHouseNumber: remove the house number from the address
+     * 
+     * 
+     * {talendTypes} String address, String houseNumber
+     * 
+     * {Category} User Defined
+     * 
+     * {example} removeHouseNumber("123 Main St.", "123") # Main St.
+     */
+    public static String removeHouseNumber(String address, String houseNumber) {
+        if (address != null) {
+        	int houseIndex = address.indexOf(houseNumber); 
+        	
+        	if (houseIndex >= 0) {
+        		
+        		houseIndex = houseIndex + houseNumber.length();
+        		
+        		return address.substring(houseIndex).trim();
+        	} else {
+        		return address;
+        	}
+        	
+        } else {
+        	return "";
+        }
+    }
+    
+    
+}

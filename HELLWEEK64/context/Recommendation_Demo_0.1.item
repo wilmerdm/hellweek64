@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_UzUdQDoaEee1kq_8gS7ABQ" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_UzUdQToaEee1kq_8gS7ABQ" comment="" name="kakfa_topic_name" prompt="kakfa_topic_name?" promptNeeded="false" type="id_String" value="Recommend"/>
+</talendfile:ContextType>

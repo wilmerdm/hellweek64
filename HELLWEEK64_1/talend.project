@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
-  <TalendProperties:Project xmi:id="_tvHFETodEeekrrMWXDIG_w" label="Hellweek64-1" description="" language="java" technicalLabel="HELLWEEK64_1" creationDate="2017-05-16T04:47:05.000-0500" author="_tvHFEjodEeekrrMWXDIG_w" productVersion="Talend Real-time Big Data Platform-6.4.0.20170510_1410-EP" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/wilmerdm/hellweek64.git&quot;,&quot;login&quot;:&quot;dwilmer@talend.com&quot;,&quot;passwd&quot;:&quot;AW5lL+/1FjdhuEv3Y8a64w==&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DI">
+  <TalendProperties:Project xmi:id="_tvHFETodEeekrrMWXDIG_w" label="Hellweek64-1" description="" language="java" technicalLabel="HELLWEEK64_1" creationDate="2017-05-16T04:47:05.000-0500" author="_tvHFEjodEeekrrMWXDIG_w" productVersion="Talend Real-time Big Data Platform-6.4.0.20170510_1410-EP" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/wilmerdm/hellweek64.git&quot;,&quot;login&quot;:&quot;dwilmer@talend.com&quot;,&quot;passwd&quot;:&quot;AW5lL+/1FjdhuEv3Y8a64w==&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DI" itemsRelationVersion="1.3">
+    <technicalStatus xmi:id="_t2th4DodEeekrrMWXDIG_w" label="development" code="DEV"/>
+    <technicalStatus xmi:id="_t2th4TodEeekrrMWXDIG_w" label="testing" code="TEST"/>
+    <technicalStatus xmi:id="_t2th4jodEeekrrMWXDIG_w" label="production" code="PROD"/>
+    <documentationStatus xmi:id="_t2jw4DodEeekrrMWXDIG_w" label="unchecked" code="UCK"/>
+    <documentationStatus xmi:id="_t2jw4TodEeekrrMWXDIG_w" label="checked" code="CHK"/>
+    <documentationStatus xmi:id="_t2jw4jodEeekrrMWXDIG_w" label="validated" code="VAL"/>
     <migrationTask xmi:id="_t1qZADodEeekrrMWXDIG_w" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_t1qZATodEeekrrMWXDIG_w" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_t1qZAjodEeekrrMWXDIG_w" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>

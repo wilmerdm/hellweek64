@@ -149,7 +149,7 @@
         <mapperTableEntries name="key" type="id_Integer" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row2" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
-        <mapperTableEntries name="key" expression="row1.key " type="id_String" nullable="true" operator="="/>
+        <mapperTableEntries name="key" expression="row1.key " type="id_Integer" nullable="true" operator="="/>
         <mapperTableEntries name="value" type="id_String" nullable="true"/>
       </inputTables>
     </nodeData>
@@ -210,7 +210,7 @@
     <elementParameter field="MEMO" name="INLINECONTENT" value="" show="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFixedFlowInput_1">
-      <column comment="" key="false" length="-1" name="key" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="key" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="-1" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="value" nullable="true" pattern="" precision="-1" sourceType="" type="id_String" originalLength="-1" usefulColumn="true"/>
     </metadata>
   </node>

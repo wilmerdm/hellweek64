@@ -955,6 +955,19 @@
       <relatedItems xmi:id="_ABxlUDoeEeekrrMWXDIG_w" id="A2_standardizeaddressTstandardizerow_1" version="Latest" type="routine"/>
       <relatedItems xmi:id="_ABxlUToeEeekrrMWXDIG_w" id="_P745IFgFEeWJiMDXNSxsVA - metadata" version="Latest" type="schema"/>
     </ItemsRelations>
+    <ItemsRelations xmi:id="_9zstkDoeEeekrrMWXDIG_w">
+      <baseItem xmi:id="_9zstkToeEeekrrMWXDIG_w" id="_wW6_YDoeEeekrrMWXDIG_w" version="0.1" type="job"/>
+      <relatedItems xmi:id="_9zstkjoeEeekrrMWXDIG_w" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstkzoeEeekrrMWXDIG_w" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstlDoeEeekrrMWXDIG_w" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstlToeEeekrrMWXDIG_w" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstljoeEeekrrMWXDIG_w" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstlzoeEeekrrMWXDIG_w" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstmDoeEeekrrMWXDIG_w" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstmToeEeekrrMWXDIG_w" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstmjoeEeekrrMWXDIG_w" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_9zstmzoeEeekrrMWXDIG_w" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_t1qZADodEeekrrMWXDIG_w" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_t1qZATodEeekrrMWXDIG_w" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_t1qZAjodEeekrrMWXDIG_w" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>

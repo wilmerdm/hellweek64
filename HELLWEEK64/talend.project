@@ -1155,4 +1155,5 @@
     <migrationTask xmi:id="_54YiHzoZEee1kq_8gS7ABQ" id="org.talend.repository.model.migration.AutoUpdateRelationsMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
   </TalendProperties:Project>
   <TalendProperties:User xmi:id="_5KYyYjoZEee1kq_8gS7ABQ" login="dwilmer@talend.com" firstName="David" lastName="Wilmer" type="DI" additionnalData="{}"/>
+  <TalendProperties:User xmi:id="_idpAwToxEeenXuv9FSa9-w" login="wilmerdm@gmail.com" firstName="David" lastName="Wilmer" type="DI" additionnalData="{}"/>
 </xmi:XMI>

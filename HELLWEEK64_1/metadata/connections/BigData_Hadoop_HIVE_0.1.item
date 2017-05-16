@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_nfmRAPqyEeaG86AyHqLWrA" name="BigData_Hadoop_HIVE" id="_neWT0PqyEeaG86AyHqLWrA" label="BigData_Hadoop_HIVE" dataPackage="_tcfGMPqyEeaG86AyHqLWrA" DatabaseType="Hive" DriverClass="org.apache.hadoop.hive.jdbc.HiveDriver" URL="jdbc:hive2://talend-hdp250.weave.local:10000/default" dbVersionString="STANDALONE" Port="10000" Username="talend" Password="" ServerName="talend-hdp250.weave.local" SID="default" SqlSynthax="SQL Syntax" DbmsId="hive_id" ProductId="HIVE" StandardSQL="true" UiSchema="default">
+    <taggedValue xmi:id="_r1QCoPqyEeaG86AyHqLWrA" tag="Is Conn Need Reload" value="false"/>
+    <taggedValue xmi:id="_tXl_IPqyEeaG86AyHqLWrA" tag="Status" value=""/>
+    <taggedValue xmi:id="_tXl_IfqyEeaG86AyHqLWrA" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_tXl_IvqyEeaG86AyHqLWrA" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_tXl_I_qyEeaG86AyHqLWrA" tag="Description" value=""/>
+    <taggedValue xmi:id="_tXl_JPqyEeaG86AyHqLWrA" tag="Author" value=""/>
+    <taggedValue xmi:id="_tXl_JfqyEeaG86AyHqLWrA" tag="otherParameter"/>
+    <taggedValue xmi:id="_tY6NwPqyEeaG86AyHqLWrA" tag="DB ProductName" value="Apache Hive"/>
+    <taggedValue xmi:id="_tY6NwfqyEeaG86AyHqLWrA" tag="DB ProductVersion" value="1.2.1000.2.5.0.0-1245"/>
+    <parameters xmi:id="_nfmRAfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_USE_YARN" value="true"/>
+    <parameters xmi:id="_nfmRAvqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_RESOURCEMANAGER_SCHEDULER_ADDRESS" value="talend-hdp250.weave.local:8030"/>
+    <parameters xmi:id="_nfmRA_qyEeaG86AyHqLWrA" key="CONN_PARA_KEY_USE_CUSTOM_CONFS" value="true"/>
+    <parameters xmi:id="_nfmRBPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_NAME_NODE_URL" value="hdfs://talend-hdp250.weave.local:8020"/>
+    <parameters xmi:id="_nfmRBfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_USERNAME" value="talend"/>
+    <parameters xmi:id="_nfmRBvqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_HADOOP_CLUSTER_ID" value="_3bBoYPqxEeaG86AyHqLWrA"/>
+    <parameters xmi:id="_nfmRB_qyEeaG86AyHqLWrA" key="CONN_PARA_KEY_JOB_HISTORY_PRINCIPAL" value="mapred/_HOST@EXAMPLE.COM"/>
+    <parameters xmi:id="_nfmRCPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_HBASE_VERSION" value="HDP_2_5"/>
+    <parameters xmi:id="_nfmRCfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_JOB_TRACKER_URL" value="talend-hdp250.weave.local:8032"/>
+    <parameters xmi:id="_nfmRCvqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_JOBHISTORY_ADDRESS" value="talend-hdp250.weave.local:10020"/>
+    <parameters xmi:id="_nfmRC_qyEeaG86AyHqLWrA" key="CONN_PARA_KEY_HIVE_VERSION" value="HDP_2_5"/>
+    <parameters xmi:id="_nfmRDPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_USE_DATANODE_HOSTNAME" value="true"/>
+    <parameters xmi:id="_nfmRDfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_DB_SERVER" value="talend-hdp250.weave.local"/>
+    <parameters xmi:id="_nfmRDvqyEeaG86AyHqLWrA" key="HIVE_AUTHENTICATION_USERNAME" value="hive"/>
+    <parameters xmi:id="_nfmRD_qyEeaG86AyHqLWrA" key="CONN_PARA_KEY_DB_TYPE" value="Hive"/>
+    <parameters xmi:id="_nfmREPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_MAPRDB_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+    <parameters xmi:id="_nfmREfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_JOB_TRACKER_PRINCIPAL" value="yarn/_HOST@EXAMPLE.COM"/>
+    <parameters xmi:id="_nfmREvqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_HIVE_DISTRIBUTION" value="HORTONWORKS"/>
+    <parameters xmi:id="_nfmRE_qyEeaG86AyHqLWrA" key="HIVE_AUTHENTICATION_PASSWORD" value="hive"/>
+    <parameters xmi:id="_nfmRFPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_MAPRDB_VERSION" value="HDP_2_5"/>
+    <parameters xmi:id="_nfmRFfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_MAPRDB_DISTRIBUTION" value="HORTONWORKS"/>
+    <parameters xmi:id="_nfmRFvqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_USE_KRB" value="false"/>
+    <parameters xmi:id="_nfmRF_qyEeaG86AyHqLWrA" key="CONN_PARA_KEY_HBASE_DISTRIBUTION" value="HORTONWORKS"/>
+    <parameters xmi:id="_nfmRGPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_STAGING_DIRECTORY" value="/user"/>
+    <parameters xmi:id="_nfmRGfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_NAME_NODE_PRINCIPAL" value="nn/_HOST@EXAMPLE.COM"/>
+    <parameters xmi:id="_nfmRGvqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_DB_PRODUCT" value="HIVE"/>
+    <parameters xmi:id="_nfmRG_qyEeaG86AyHqLWrA" key="CONN_PARA_KEY_HIVE_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+    <parameters xmi:id="_nfmRHPqyEeaG86AyHqLWrA" key="HIVE_AUTHENTICATION_METASTOREURL" value="thrift://talend-hdp250.weave.local:9083"/>
+    <parameters xmi:id="_nfmRHfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_HBASE_AUTHENTICATION_USE_MAPRTICKET" value="false"/>
+    <parameters xmi:id="_nfmRHvqyEeaG86AyHqLWrA" key="HIVE_SERVER_VERSION" value="HIVE2"/>
+    <parameters xmi:id="_nfmRH_qyEeaG86AyHqLWrA" key="CONN_PARA_KEY_HIVE_MODE" value="STANDALONE"/>
+    <parameters xmi:id="_ry0ZsPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+    <parameters xmi:id="_r0IBQPqyEeaG86AyHqLWrA" key="HIVE_AUTHENTICATION_HIVEPRINCIPLA" value=""/>
+    <parameters xmi:id="_r0IBQfqyEeaG86AyHqLWrA" key="HIVE_AUTHENTICATION_DRIVERCLASS" value=""/>
+    <parameters xmi:id="_r0IoUvqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_KEYTAB_PRINCIPLA" value=""/>
+    <parameters xmi:id="_r0IoU_qyEeaG86AyHqLWrA" key="CONN_PARA_KEY_KEYTAB" value=""/>
+    <parameters xmi:id="_r0IoVPqyEeaG86AyHqLWrA" key="HIVE_EXECUTION_ENGINE"/>
+    <parameters xmi:id="_r0KdgPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_USE_SSL" value="false"/>
+    <parameters xmi:id="_r1f6QPqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_SSL_TRUST_STORE_PATH" value=""/>
+    <parameters xmi:id="_r1f6QfqyEeaG86AyHqLWrA" key="CONN_PARA_KEY_SSL_TRUST_STORE_PASSWORD" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_tcfGMPqyEeaG86AyHqLWrA" name="default" dataManager="_nfmRAPqyEeaG86AyHqLWrA"/>
+</xmi:XMI>

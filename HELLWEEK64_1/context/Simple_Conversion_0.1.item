@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<talendfile:ContextType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmi:id="_7bUWYDodEeekrrMWXDIG_w" confirmationNeeded="false" name="Default">
+  <contextParameter xmi:id="_7bUWYTodEeekrrMWXDIG_w" comment="" name="Local_Dir" prompt="Local_Dir?" promptNeeded="false" type="id_String" value="&quot;/home/talend/Documents/WordCount/&quot;"/>
+  <contextParameter xmi:id="_7bUWYjodEeekrrMWXDIG_w" comment="" name="HDFS_Dir" prompt="HDFS_Dir?" promptNeeded="false" type="id_String" value="&quot;/user/talend/WordCount/&quot;"/>
+  <contextParameter xmi:id="_7bUWYzodEeekrrMWXDIG_w" comment="" name="File_Name" prompt="File_Name?" promptNeeded="false" type="id_String" value="&quot;GettingStartedWithBigData&quot;"/>
+</talendfile:ContextType>

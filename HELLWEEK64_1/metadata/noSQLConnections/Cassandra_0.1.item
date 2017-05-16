@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TalendNoSQLMetadata:NoSQLConnection xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendNoSQLMetadata="http://www.talend.org/nosql" xmi:id="_6iLqoBklEeaqlpQZ2Bqy9A" name="Cassandra" label="Cassandra" dbType="CASSANDRA">
+  <attributes xmi:id="_Be0wQFgqEea-ndZsrUznHA" key="DB_VERSION" value="CASSANDRA_3_0"/>
+  <attributes xmi:id="_Be0wQVgqEea-ndZsrUznHA" key="API_TYPE" value="DATASTAX"/>
+  <attributes xmi:id="_Be0wQlgqEea-ndZsrUznHA" key="HOST" value="cassandra0.weave.local"/>
+  <attributes xmi:id="_Be0wQ1gqEea-ndZsrUznHA" key="PORT" value="9042"/>
+  <attributes xmi:id="_Be0wRFgqEea-ndZsrUznHA" key="DATABASE" value=""/>
+  <attributes xmi:id="_Be0wRVgqEea-ndZsrUznHA" key="REQUIRED_AUTHENTICATION" value="false"/>
+  <attributes xmi:id="_Be0wRlgqEea-ndZsrUznHA" key="USERNAME" value=""/>
+  <attributes xmi:id="_Be0wR1gqEea-ndZsrUznHA" key="PASSWORD" value=""/>
+</TalendNoSQLMetadata:NoSQLConnection>

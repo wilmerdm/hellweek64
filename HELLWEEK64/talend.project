@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendProperties="http://www.talend.org/properties">
+  <TalendProperties:Project xmi:id="_5KYyYToZEee1kq_8gS7ABQ" label="Hellweek64" description="" language="java" technicalLabel="HELLWEEK64" creationDate="2017-05-16T02:52:07.000-0500" author="_5KYyYjoZEee1kq_8gS7ABQ" productVersion="Talend MDM Platform-6.4.0.20170510_1410-EP" url="{&quot;commitLogPattern&quot;:&quot;{0}&quot;,&quot;location&quot;:&quot;https://github.com/wilmerdm/hellweek64.git&quot;,&quot;login&quot;:&quot;dwilmer@talend.com&quot;,&quot;passwd&quot;:&quot;AW5lL+/1FjdhuEv3Y8a64w==&quot;,&quot;settings&quot;:&quot;000&quot;,&quot;storage&quot;:&quot;git&quot;}" type="DI" bigData="false"/>
+  <TalendProperties:User xmi:id="_5KYyYjoZEee1kq_8gS7ABQ" login="dwilmer@talend.com" firstName="David" lastName="Wilmer" type="DI" additionnalData="{}"/>
+</xmi:XMI>
